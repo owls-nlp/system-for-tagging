@@ -14,13 +14,13 @@
 
 `im.debug_tablefinder()`
 
-![Пример удачной работы PDFplumber (Пример 1)](http://webdesign.ru.net/images/Heydon_min.jpg)
+![Пример удачной работы PDFplumber (Пример 1)](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_1.png)
 
-![Пример неудачной работы PDFplumber, когда таблица не находится](http://webdesign.ru.net/images/Heydon_min.jpg)
+![Пример неудачной работы PDFplumber, когда таблица не находится](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_2.png)
 
-![Пример неудачной работы PDFplumber, когда таблица выделяется некорректно](http://webdesign.ru.net/images/Heydon_min.jpg)
+![Пример неудачной работы PDFplumber, когда таблица выделяется некорректно](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_3.png)
 
-![Пример неудачной работы PDFplumber, когда таблица находится там, где нет таблицы](http://webdesign.ru.net/images/Heydon_min.jpg)
+![Пример неудачной работы PDFplumber, когда таблица находится там, где нет таблицы](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_4.jpg)
 
 Для извлечения таблиц используется метод *extract_tables(table_settings={})*. Возвращает текст, извлеченный из всех таблиц, найденных на странице, в виде списка списков списков со структурой таблица, строка, ячейка.
 
@@ -28,8 +28,8 @@
 
 `df = pd.DataFrame(table[0][1:], columns=table[0][0])`
 
-![Первая таблица, извлеченная из примера 1, в виде Pandas DataFrame](http://webdesign.ru.net/images/Heydon_min.jpg)
+![Первая таблица, извлеченная из примера 1, в виде Pandas DataFrame](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_5.jpg)
 
-![Вторая таблица, извлеченная из примера 1, в виде Pandas DataFrame](http://webdesign.ru.net/images/Heydon_min.jpg)
+![Вторая таблица, извлеченная из примера 1, в виде Pandas DataFrame](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_6.jpg)
 
 Таким образом, **PDFplumber** справляется с таблицами, у которых есть границы (выделены границы самой таблицы, строки и столбцы), не находит таблицы без границ и плохо справляется с теми, у которых нестандартный стиль. Соответственно, логичнее всего находить таблицы среди тех информационных блоков, которые помечены классом «таблица», и, если не получилось извлечь из блока таблицу, сохранить ее как изображение. 
