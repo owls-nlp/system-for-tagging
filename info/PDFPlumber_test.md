@@ -16,19 +16,19 @@
 
 ![Пример удачной работы PDFplumber (Пример 1)](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_1.png)
 
-Пример удачной работы PDFplumber (Пример 1)
+**Рис. 1.** Пример удачной работы PDFplumber (Пример 1)
 
 ![Пример неудачной работы PDFplumber, когда таблица не находится](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_2.png)
 
-Пример неудачной работы PDFplumber, когда таблица не находится
+**Рис. 2.** Пример неудачной работы PDFplumber, когда таблица не находится
 
 ![Пример неудачной работы PDFplumber, когда таблица выделяется некорректно](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_3.png)
 
-Пример неудачной работы PDFplumber, когда таблица выделяется некорректно
+**Рис. 3.** Пример неудачной работы PDFplumber, когда таблица выделяется некорректно
 
 ![Пример неудачной работы PDFplumber, когда таблица находится там, где нет таблицы](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_4.jpg)
 
-Пример неудачной работы PDFplumber, когда таблица находится там, где нет таблицы
+**Рис. 4.** Пример неудачной работы PDFplumber, когда таблица находится там, где нет таблицы
 
 Для извлечения таблиц используется метод *extract_tables(table_settings={})*. Возвращает текст, извлеченный из всех таблиц, найденных на странице, в виде списка списков списков со структурой таблица, строка, ячейка.
 
@@ -38,10 +38,10 @@
 
 ![Первая таблица, извлеченная из примера 1, в виде Pandas DataFrame](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_5.png)
 
-Первая таблица, извлеченная из примера 1, в виде Pandas DataFrame
+**Рис. 5.** Первая таблица, извлеченная из примера 1, в виде Pandas DataFrame
 
 ![Вторая таблица, извлеченная из примера 1, в виде Pandas DataFrame](https://github.com/owls-nlp/system-for-tagging/blob/master/info/img/PDFPlumber_test_6.png)
 
-Вторая таблица, извлеченная из примера 1, в виде Pandas DataFrame
+**Рис. 6.** Вторая таблица, извлеченная из примера 1, в виде Pandas DataFrame
 
 Таким образом, **PDFplumber** справляется с таблицами, у которых есть границы (выделены границы самой таблицы, строки и столбцы), не находит таблицы без границ и плохо справляется с теми, у которых нестандартный стиль. Соответственно, логичнее всего находить таблицы среди тех информационных блоков, которые помечены классом «таблица», и, если не получилось извлечь из блока таблицу, сохранить ее как изображение. 
